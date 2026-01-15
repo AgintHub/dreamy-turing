@@ -1,0 +1,38 @@
+{
+  "analyzedataforindustry": {
+    "output": {
+      "output": "Analyzed the preprocessed data and determined that there are patterns related to seed round raises by industry. For instance, average raise sizes in the technology industry tended to be larger, while those in the healthcare industry were smaller. The frequency of raises also varied across industries, with the finance industry experiencing more frequent raises. These insights could be useful for investors looking to make informed decisions about which companies to fund."
+    },
+    "description": "Identify meaningful patterns and trends in the data."
+  },
+  "datacollection": {
+    "output": {
+      "output": "Extracted latest seed round raises data from Crunchbase, VentureData, and private databases."
+    },
+    "description": "Collect and preprocess the data for analysis."
+  },
+  "generatereport": {
+    "output": {
+      "output": "Comprehensive Report: Latest Seed Round Raises by Industry\n\nIn this report, we explore the latest seed round raises per day, categorized by industry, with insights, patterns, or trends as found in the analysis.\n\nBased on the categorized data, we note the following:\n\nTechnology Industry: Average raise sizes tend to be larger, with an increase in frequencies observed over time.\nFinance Industry: More frequent raises are observed, with varying sizes.\nHealthcare Industry: Smaller average raise sizes are noted, with a relatively stable frequency of raises.\nConsumer Goods Industry: Shows a mix of large and small raises, with no distinct trend observed.\n\nInsights:\n\n- Larger average raise sizes are associated with the technology industry.\n- More frequent raises are observed in the finance industry.\n- The healthcare industry presents smaller average raise sizes.\n- A mix of large and small raises are noted in the consumer goods industry.\n\nThis report is designed to provide a clear understanding of the trends and patterns in seed round raises across various industries, thus serving as a valuable resource for stakeholders making informed investment decisions."
+    },
+    "description": "Compose a comprehensive and clear report for stakeholders."
+  },
+  "identifymissingdata": {
+    "output": {
+      "output": "Based on the extracted data from Crunchbase, VentureData, and private databases, the necessary actions to rectify data inconsistencies include:\nVerifying data accuracy for Crunchbase and VentureData sources.\nEnhancing data completeness by incorporating more private database information. \nReviewing data quality for potential errors or inconsistencies."
+    },
+    "description": "Determine the necessary actions to rectify data inconsistencies."
+  },
+  "industryclassification": {
+    "output": {
+      "output": "Based on the cleaned and formatted data from Crunchbase, VentureData, and private databases, the companies have been categorized into the following industries: Technology, Finance, Healthcare, and Consumer Goods. This categorization was done based on industry-specific attributes and characteristics present in the data."
+    },
+    "description": "Categorize the companies by industry for comparative analysis."
+  },
+  "initialdatacleaning": {
+    "output": {
+      "output": "Cleaned up and formatted the extracted data from Crunchbase, VentureData, and private databases. Removed any duplicates, null values, and data with incorrect formats."
+    },
+    "description": "Clean and process the raw data for analysis."
+  }
+}

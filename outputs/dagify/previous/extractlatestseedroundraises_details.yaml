@@ -1,5 +1,6 @@
 dag_type: plain_text
-description: Generated workflow from UI.
+description: Build a piece of software to extract the latest seed round raises per
+  day, categorize them by industry, and present a singular report in the morning.
 name: extractlatestseedroundraises
 nodes:
   analyzedataforindustry:
@@ -8,7 +9,8 @@ nodes:
     name: analyzedataforindustry
     nodes_depended_on:
     - initialdatacleaning
-    nodes_dependent_on: []
+    nodes_dependent_on:
+    - industryclassification
     prompt: Analyze the preprocessed data to determine patterns, trends, or insights
       related to the seed round raises by industry. Consider factors such as average
       raise sizes, frequency of raises, or changes over time.
@@ -39,7 +41,8 @@ nodes:
     name: identifymissingdata
     nodes_depended_on:
     - datacollection
-    nodes_dependent_on: []
+    nodes_dependent_on:
+    - initialdatacleaning
     prompt: Identify which data points are missing, incomplete, or have any issues.
       Suggest potential sources or solutions for addressing these gaps.
   industryclassification:
@@ -48,7 +51,8 @@ nodes:
     name: industryclassification
     nodes_depended_on:
     - initialdatacleaning
-    nodes_dependent_on: []
+    nodes_dependent_on:
+    - analyzedataforindustry
     prompt: Classify the extracted data into relevant industries based on predefined
       categories or classification systems. Consider data attributes and characteristics
       that indicate industry affiliation.
@@ -58,6 +62,7 @@ nodes:
     name: initialdatacleaning
     nodes_depended_on:
     - datacollection
-    nodes_dependent_on: []
+    nodes_dependent_on:
+    - identifymissingdata
     prompt: Perform an initial data cleaning process to remove duplicates, null values,
       and incorrect format. Handle any edge cases and data inconsistencies.
